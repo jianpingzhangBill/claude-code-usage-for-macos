@@ -2,6 +2,15 @@
 
 一个原生 macOS 菜单栏小工具,实时监控 **Claude Code** 的官方用量限额与花费。
 
+## 截图
+
+<p align="center">
+  <img src="docs/screenshot-dashboard.png" width="340" alt="用量限额与活动窗口仪表盘">
+</p>
+<p align="center">
+  <img src="docs/screenshot-cost.png" width="520" alt="花费估算">
+</p>
+
 ## 前置要求
 
 - macOS 13+
