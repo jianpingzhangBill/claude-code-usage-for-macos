@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-14
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Show toolchain
         run: swift --version
@@ -30,7 +30,7 @@ jobs:
           ditto -c -k --keepParent "Claude Usage Monitor.app" "Claude Usage Monitor.zip"
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ClaudeUsageMonitor
           path: dist/Claude Usage Monitor.zip
