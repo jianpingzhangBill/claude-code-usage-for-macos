@@ -28,7 +28,18 @@ open "dist/Claude Usage Monitor.app"
 ```
 
 需要 macOS 13+ 和 Swift 6（Xcode 命令行工具）。构建产物是一个 `LSUIElement` 应用
-（只在菜单栏，无 Dock 图标）。
+（只在菜单栏，无 Dock 图标）。构建产物在 `dist/`，不纳入版本管理。
+
+### 自动发布（GitHub Actions）
+
+推送一个版本标签即可由 CI 自动构建并发布 Release（附带打包好的 `.app.zip`）：
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+工作流见 `.github/workflows/release.yml`，也可在 Actions 页手动触发（`workflow_dispatch`）。
 
 想开机自启：系统设置 → 通用 → 登录项 → 添加 `dist/Claude Usage Monitor.app`。
 

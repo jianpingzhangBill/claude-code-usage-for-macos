@@ -3,3 +3,6 @@
 
 # Swift build artifacts
 .build/
+
+# Build output (produced by build.sh / CI)
+dist/
