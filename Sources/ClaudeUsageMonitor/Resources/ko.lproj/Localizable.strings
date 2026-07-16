@@ -1,0 +1,28 @@
+/* Header / controls */
+"Refresh" = "새로고침";
+
+/* Loading / errors */
+"Reading official usage (claude /usage)…" = "공식 사용량을 읽는 중 (claude /usage)…";
+"Can't fetch official usage" = "공식 사용량을 가져올 수 없습니다";
+"Requires running `claude -p '/usage'` in a login shell." = "로그인 셸에서 `claude -p '/usage'`를 실행할 수 있어야 합니다.";
+"Couldn't launch claude: %@" = "claude를 실행할 수 없습니다: %@";
+"claude /usage timed out (>40s)" = "claude /usage 시간 초과 (>40초)";
+"claude /usage produced no output" = "claude /usage 출력이 없습니다";
+
+/* Official limits + activity */
+"Usage limits · Official" = "사용량 한도 · 공식";
+"requests" = "요청";
+"%lld sessions" = "세션 %lld개";
+"Top sources · %@" = "주요 출처 · %@";
+
+/* Local cost */
+"Estimated cost · Local logs" = "예상 비용 · 로컬 로그";
+"Estimated at public rates" = "공개 요금 기준 추정";
+"Today" = "오늘";
+"Last 7 days" = "최근 7일";
+"All time" = "전체";
+"No cost records yet" = "비용 기록이 아직 없습니다";
+
+/* Footer */
+"Updated at %@" = "업데이트: %@";
+"Quit" = "종료";

@@ -1,0 +1,28 @@
+/* Header / controls */
+"Refresh" = "Обновить";
+
+/* Loading / errors */
+"Reading official usage (claude /usage)…" = "Чтение официального использования (claude /usage)…";
+"Can't fetch official usage" = "Не удалось получить официальное использование";
+"Requires running `claude -p '/usage'` in a login shell." = "Требуется возможность выполнить `claude -p '/usage'` в оболочке входа.";
+"Couldn't launch claude: %@" = "Не удалось запустить claude: %@";
+"claude /usage timed out (>40s)" = "claude /usage превысил время ожидания (>40 с)";
+"claude /usage produced no output" = "claude /usage не выдал результата";
+
+/* Official limits + activity */
+"Usage limits · Official" = "Лимиты использования · Официально";
+"requests" = "запросов";
+"%lld sessions" = "сессий: %lld";
+"Top sources · %@" = "Основные источники · %@";
+
+/* Local cost */
+"Estimated cost · Local logs" = "Оценка расходов · Локальные логи";
+"Estimated at public rates" = "Оценка по публичным тарифам";
+"Today" = "Сегодня";
+"Last 7 days" = "Последние 7 дней";
+"All time" = "За всё время";
+"No cost records yet" = "Пока нет данных о расходах";
+
+/* Footer */
+"Updated at %@" = "Обновлено в %@";
+"Quit" = "Выйти";

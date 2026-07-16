@@ -1,50 +1,54 @@
 # Claude Usage Monitor
 
-一个原生 macOS 菜单栏小工具,实时监控 **Claude Code** 的官方用量限额与花费。
+**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
 
-## 截图
+A native macOS menu-bar app that monitors **Claude Code**'s official usage limits and estimated spend in real time.
+
+> The app UI auto-adapts to your macOS system language — English, 简体中文, 日本語, 한국어, Deutsch, Français, Português, Русский — and falls back to English otherwise.
+
+## Screenshots
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="用量限额与活动窗口仪表盘">
+  <img src="docs/screenshot-dashboard.png" width="340" alt="Usage limits and activity dashboard">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="花费估算">
+  <img src="docs/screenshot-cost.png" width="520" alt="Estimated spend">
 </p>
 
-## 前置要求
+## Requirements
 
 - macOS 13+
-- 已安装并登录 **Claude Code** CLI(工具通过 `claude -p '/usage'` 读取官方限额)
+- **Claude Code** CLI installed and logged in (the app reads official limits via `claude -p '/usage'`)
 
-## 安装
+## Install
 
-1. 从 [Releases](../../releases) 下载最新的 `Claude Usage Monitor.zip`,解压。
-2. 把 `Claude Usage Monitor.app` 拖到「应用程序」。
-3. 首次打开若被拦截:右键 App → 打开;或到「系统设置 → 隐私与安全性」点「仍要打开」。
+1. Download the latest `Claude Usage Monitor.zip` from [Releases](../../releases) and unzip it.
+2. Drag `Claude Usage Monitor.app` into Applications.
+3. If macOS blocks the first launch: right-click the app → Open; or go to System Settings → Privacy & Security and click "Open Anyway".
 
-> App 为本地 ad-hoc 签名,未做 Apple 公证,所以首次需手动放行。
+> The app is locally ad-hoc signed and not notarized by Apple, so the first launch needs a manual approval.
 
-## 使用
+## Usage
 
-启动后只在**菜单栏**显示图标,无 Dock 图标。
+After launching it lives only in the **menu bar** — no Dock icon.
 
-- 菜单栏标题显示当前**最高的限额使用率(%)**,越接近限额越红。
-- **点击图标**展开仪表盘:
-  - **用量限额 · 官方** —— 当前 session、本周(全模型)、本周(Fable)的使用百分比 + 重置时间。与 Claude Code 里 `/usage` 完全一致。
-  - **活动窗口** —— 近 24h / 近 7d 的请求数、会话数、长上下文占比。
-  - **主要来源** —— 近 7d 贡献最多的 skills / plugins / MCP / subagents。
-  - **花费估算 · 本地日志** —— 从 `~/.claude/projects/**/*.jsonl` 按公开单价估算的今日 / 近 7 天 / 全部花费,附近 14 天柱状图。
+- The menu-bar title shows the current **peak limit usage (%)**; the closer to the limit, the redder.
+- **Click the icon** to expand the dashboard:
+  - **Usage limits · Official** — usage percentage + reset time for the current session, current week (all models), and current week (Fable). Matches `/usage` inside Claude Code exactly.
+  - **Activity windows** — request count, session count, and long-context share for the last 24h / 7d.
+  - **Top sources** — the skills / plugins / MCP / subagents that contributed the most over the last 7d.
+  - **Estimated cost · Local logs** — today / last 7 days / all-time spend estimated from `~/.claude/projects/**/*.jsonl` at public rates, with a 14-day bar chart.
 
-刷新频率:官方限额每 5 分钟一次,本地花费每 60 秒一次。
+Refresh cadence: official limits every 5 minutes, local spend every 60 seconds.
 
-### 开机自启
+### Launch at login
 
-系统设置 → 通用 → 登录项 → 添加 `Claude Usage Monitor.app`。
+System Settings → General → Login Items → add `Claude Usage Monitor.app`.
 
-## 自定义定价
+## Custom pricing
 
-花费按 Anthropic 公开单价估算(Fable/Mythos 暂按 Opus 档)。要覆盖,创建
-`~/.config/claude-usage-monitor/pricing.json`,单位是「美元 / 百万 token」:
+Spend is estimated at Anthropic's public rates (Fable/Mythos temporarily billed at the Opus tier). To override, create
+`~/.config/claude-usage-monitor/pricing.json`, with units in "USD per million tokens":
 
 ```json
 {
@@ -52,13 +56,13 @@
 }
 ```
 
-键名按模型 id 子串匹配(如 `opus`、`sonnet`、`haiku`、`fable`)。非 Anthropic 模型无单价时花费计为 0,但 token 仍会统计。
+Keys are matched by model-id substring (e.g. `opus`, `sonnet`, `haiku`, `fable`). Non-Anthropic models with no rate are counted as $0 in cost, but their tokens are still tallied.
 
-## 从源码构建
+## Build from source
 
 ```bash
 ./build.sh
 open "dist/Claude Usage Monitor.app"
 ```
 
-需要 Swift 6(Xcode 命令行工具)。产物在 `dist/`(不纳入版本管理)。
+Requires Swift 6 (Xcode command-line tools). Output lands in `dist/` (not tracked in version control).

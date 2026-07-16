@@ -70,7 +70,7 @@ final class LimitsStore: ObservableObject {
         p.standardOutput = out
         p.standardError = err
         do { try p.run() } catch {
-            return .failure(RunError(message: "无法启动 claude：\(error.localizedDescription)"))
+            return .failure(RunError(message: L("Couldn't launch claude: %@", error.localizedDescription)))
         }
         // Guard against a hung CLI.
         let deadline = DispatchTime.now() + 40
@@ -79,13 +79,13 @@ final class LimitsStore: ObservableObject {
         DispatchQueue.global().async { p.waitUntilExit(); group.leave() }
         if group.wait(timeout: deadline) == .timedOut {
             p.terminate()
-            return .failure(RunError(message: "claude /usage 超时（>40s）"))
+            return .failure(RunError(message: L("claude /usage timed out (>40s)")))
         }
         let data = out.fileHandleForReading.readDataToEndOfFile()
         let text = String(data: data, encoding: .utf8) ?? ""
         if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             let e = String(data: err.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8) ?? ""
-            return .failure(RunError(message: e.isEmpty ? "claude /usage 无输出" : e.trimmingCharacters(in: .whitespacesAndNewlines)))
+            return .failure(RunError(message: e.isEmpty ? L("claude /usage produced no output") : e.trimmingCharacters(in: .whitespacesAndNewlines)))
         }
         return .success(text)
     }

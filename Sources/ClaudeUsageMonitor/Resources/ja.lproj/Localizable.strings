@@ -1,0 +1,28 @@
+/* Header / controls */
+"Refresh" = "更新";
+
+/* Loading / errors */
+"Reading official usage (claude /usage)…" = "公式の使用量を読み込み中 (claude /usage)…";
+"Can't fetch official usage" = "公式の使用量を取得できません";
+"Requires running `claude -p '/usage'` in a login shell." = "ログインシェルで `claude -p '/usage'` を実行できる必要があります。";
+"Couldn't launch claude: %@" = "claude を起動できませんでした: %@";
+"claude /usage timed out (>40s)" = "claude /usage がタイムアウトしました (>40秒)";
+"claude /usage produced no output" = "claude /usage の出力がありません";
+
+/* Official limits + activity */
+"Usage limits · Official" = "使用量上限 · 公式";
+"requests" = "リクエスト";
+"%lld sessions" = "%lld セッション";
+"Top sources · %@" = "主な内訳 · %@";
+
+/* Local cost */
+"Estimated cost · Local logs" = "推定コスト · ローカルログ";
+"Estimated at public rates" = "公開料金で推定";
+"Today" = "今日";
+"Last 7 days" = "直近7日間";
+"All time" = "全期間";
+"No cost records yet" = "コスト記録はまだありません";
+
+/* Footer */
+"Updated at %@" = "更新: %@";
+"Quit" = "終了";

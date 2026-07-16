@@ -1,0 +1,28 @@
+/* Header / controls */
+"Refresh" = "Atualizar";
+
+/* Loading / errors */
+"Reading official usage (claude /usage)…" = "Lendo uso oficial (claude /usage)…";
+"Can't fetch official usage" = "Não foi possível obter o uso oficial";
+"Requires running `claude -p '/usage'` in a login shell." = "Requer poder executar `claude -p '/usage'` em um shell de login.";
+"Couldn't launch claude: %@" = "Não foi possível iniciar o claude: %@";
+"claude /usage timed out (>40s)" = "claude /usage expirou (>40s)";
+"claude /usage produced no output" = "claude /usage não produziu saída";
+
+/* Official limits + activity */
+"Usage limits · Official" = "Limites de uso · Oficial";
+"requests" = "solicitações";
+"%lld sessions" = "%lld sessões";
+"Top sources · %@" = "Principais fontes · %@";
+
+/* Local cost */
+"Estimated cost · Local logs" = "Custo estimado · Logs locais";
+"Estimated at public rates" = "Estimado pelos preços públicos";
+"Today" = "Hoje";
+"Last 7 days" = "Últimos 7 dias";
+"All time" = "Total";
+"No cost records yet" = "Ainda não há registros de custo";
+
+/* Footer */
+"Updated at %@" = "Atualizado às %@";
+"Quit" = "Sair";

@@ -3,13 +3,17 @@ import PackageDescription
 
 let package = Package(
     name: "ClaudeUsageMonitor",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v13)
     ],
     targets: [
         .executableTarget(
             name: "ClaudeUsageMonitor",
-            path: "Sources/ClaudeUsageMonitor"
+            path: "Sources/ClaudeUsageMonitor",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )

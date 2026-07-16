@@ -1,0 +1,28 @@
+/* Header / controls */
+"Refresh" = "刷新";
+
+/* Loading / errors */
+"Reading official usage (claude /usage)…" = "正在读取官方用量 (claude /usage)…";
+"Can't fetch official usage" = "无法获取官方用量";
+"Requires running `claude -p '/usage'` in a login shell." = "需要能在登录 shell 里运行 `claude -p '/usage'`。";
+"Couldn't launch claude: %@" = "无法启动 claude:%@";
+"claude /usage timed out (>40s)" = "claude /usage 超时(>40s)";
+"claude /usage produced no output" = "claude /usage 无输出";
+
+/* Official limits + activity */
+"Usage limits · Official" = "用量限额 · 官方";
+"requests" = "请求";
+"%lld sessions" = "%lld 个会话";
+"Top sources · %@" = "主要来源 · %@";
+
+/* Local cost */
+"Estimated cost · Local logs" = "花费估算 · 本地日志";
+"Estimated at public rates" = "按公开单价估算";
+"Today" = "今日";
+"Last 7 days" = "近 7 天";
+"All time" = "全部";
+"No cost records yet" = "暂无花费记录";
+
+/* Footer */
+"Updated at %@" = "更新于 %@";
+"Quit" = "退出";
