@@ -40,7 +40,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" \
-            "dist/Claude Usage Monitor.zip" \
-            --title "${GITHUB_REF_NAME}" \
-            --generate-notes
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            echo "Release ${GITHUB_REF_NAME} exists — uploading asset (overwrite)."
+            gh release upload "${GITHUB_REF_NAME}" \
+              "dist/Claude Usage Monitor.zip" --clobber
+          else
+            echo "Creating release ${GITHUB_REF_NAME}."
+            gh release create "${GITHUB_REF_NAME}" \
+              "dist/Claude Usage Monitor.zip" \
+              --title "${GITHUB_REF_NAME}" \
+              --generate-notes
+          fi
