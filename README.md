@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
+**English** · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md) · [Deutsch](docs/README.de.md) · [Français](docs/README.fr.md) · [Português](docs/README.pt.md) · [Русский](docs/README.ru.md)
 
 A native macOS menu-bar app that monitors **Claude Code**'s official usage limits and estimated spend in real time.
 

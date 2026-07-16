@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · **Português** · [Русский](README.ru.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · **Português** · [Русский](README.ru.md)
 
 Um app nativo para a barra de menus do macOS que monitora em tempo real os limites de uso oficiais e os gastos estimados do **Claude Code**.
 
@@ -9,10 +9,10 @@ Um app nativo para a barra de menus do macOS que monitora em tempo real os limit
 ## Capturas de tela
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="Painel de limites de uso e atividade">
+  <img src="screenshot-dashboard.png" width="340" alt="Painel de limites de uso e atividade">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="Gasto estimado">
+  <img src="screenshot-cost.png" width="520" alt="Gasto estimado">
 </p>
 
 ## Requisitos
@@ -22,7 +22,7 @@ Um app nativo para a barra de menus do macOS que monitora em tempo real os limit
 
 ## Instalação
 
-1. Baixe o `Claude Usage Monitor.zip` mais recente em [Releases](../../releases) e descompacte.
+1. Baixe o `Claude Usage Monitor.zip` mais recente em [Releases](../../../releases) e descompacte.
 2. Arraste `Claude Usage Monitor.app` para Aplicativos.
 3. Se o macOS bloquear a primeira execução: clique com o botão direito no app → Abrir; ou vá em Ajustes do Sistema → Privacidade e Segurança e clique em "Abrir mesmo assim".
 

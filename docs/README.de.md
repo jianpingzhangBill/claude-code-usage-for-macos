@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Deutsch** · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Deutsch** · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
 
 Eine native macOS-Menüleisten-App, die die offiziellen Nutzungslimits und die geschätzten Kosten von **Claude Code** in Echtzeit überwacht.
 
@@ -9,10 +9,10 @@ Eine native macOS-Menüleisten-App, die die offiziellen Nutzungslimits und die g
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="Dashboard mit Nutzungslimits und Aktivität">
+  <img src="screenshot-dashboard.png" width="340" alt="Dashboard mit Nutzungslimits und Aktivität">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="Geschätzte Kosten">
+  <img src="screenshot-cost.png" width="520" alt="Geschätzte Kosten">
 </p>
 
 ## Voraussetzungen
@@ -22,7 +22,7 @@ Eine native macOS-Menüleisten-App, die die offiziellen Nutzungslimits und die g
 
 ## Installation
 
-1. Lade die neueste `Claude Usage Monitor.zip` aus den [Releases](../../releases) herunter und entpacke sie.
+1. Lade die neueste `Claude Usage Monitor.zip` aus den [Releases](../../../releases) herunter und entpacke sie.
 2. Ziehe `Claude Usage Monitor.app` in den Ordner „Programme".
 3. Falls macOS den ersten Start blockiert: Rechtsklick auf die App → Öffnen; oder gehe zu Systemeinstellungen → Datenschutz & Sicherheit und klicke auf „Trotzdem öffnen".
 

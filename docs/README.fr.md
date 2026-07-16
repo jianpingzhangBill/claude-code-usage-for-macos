@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · **Français** · [Português](README.pt.md) · [Русский](README.ru.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · **Français** · [Português](README.pt.md) · [Русский](README.ru.md)
 
 Une application native pour la barre de menus macOS qui surveille en temps réel les limites d'utilisation officielles et les dépenses estimées de **Claude Code**.
 
@@ -9,10 +9,10 @@ Une application native pour la barre de menus macOS qui surveille en temps réel
 ## Captures d'écran
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="Tableau de bord des limites d'utilisation et de l'activité">
+  <img src="screenshot-dashboard.png" width="340" alt="Tableau de bord des limites d'utilisation et de l'activité">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="Dépenses estimées">
+  <img src="screenshot-cost.png" width="520" alt="Dépenses estimées">
 </p>
 
 ## Prérequis
@@ -22,7 +22,7 @@ Une application native pour la barre de menus macOS qui surveille en temps réel
 
 ## Installation
 
-1. Téléchargez le dernier `Claude Usage Monitor.zip` depuis les [Releases](../../releases) et décompressez-le.
+1. Téléchargez le dernier `Claude Usage Monitor.zip` depuis les [Releases](../../../releases) et décompressez-le.
 2. Glissez `Claude Usage Monitor.app` dans Applications.
 3. Si macOS bloque le premier lancement : clic droit sur l'application → Ouvrir ; ou allez dans Réglages Système → Confidentialité et sécurité et cliquez sur « Ouvrir quand même ».
 

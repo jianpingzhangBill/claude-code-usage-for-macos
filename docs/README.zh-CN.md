@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
+[English](../README.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
 
 一个原生 macOS 菜单栏小工具,实时监控 **Claude Code** 的官方用量限额与花费。
 
@@ -9,10 +9,10 @@
 ## 截图
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="用量限额与活动窗口仪表盘">
+  <img src="screenshot-dashboard.png" width="340" alt="用量限额与活动窗口仪表盘">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="花费估算">
+  <img src="screenshot-cost.png" width="520" alt="花费估算">
 </p>
 
 ## 前置要求
@@ -22,7 +22,7 @@
 
 ## 安装
 
-1. 从 [Releases](../../releases) 下载最新的 `Claude Usage Monitor.zip`,解压。
+1. 从 [Releases](../../../releases) 下载最新的 `Claude Usage Monitor.zip`,解压。
 2. 把 `Claude Usage Monitor.app` 拖到「应用程序」。
 3. 首次打开若被拦截:右键 App → 打开;或到「系统设置 → 隐私与安全性」点「仍要打开」。
 

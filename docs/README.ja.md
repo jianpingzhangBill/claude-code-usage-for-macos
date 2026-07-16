@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · [简体中文](README.zh-CN.md) · **日本語** · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · **日本語** · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [Русский](README.ru.md)
 
 **Claude Code** の公式な使用量上限と推定コストをリアルタイムで監視する、ネイティブ macOS メニューバーアプリです。
 
@@ -9,10 +9,10 @@
 ## スクリーンショット
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="使用量上限とアクティビティのダッシュボード">
+  <img src="screenshot-dashboard.png" width="340" alt="使用量上限とアクティビティのダッシュボード">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="推定コスト">
+  <img src="screenshot-cost.png" width="520" alt="推定コスト">
 </p>
 
 ## 必要条件
@@ -22,7 +22,7 @@
 
 ## インストール
 
-1. [Releases](../../releases) から最新の `Claude Usage Monitor.zip` をダウンロードして解凍します。
+1. [Releases](../../../releases) から最新の `Claude Usage Monitor.zip` をダウンロードして解凍します。
 2. `Claude Usage Monitor.app` を「アプリケーション」にドラッグします。
 3. 初回起動がブロックされたら: アプリを右クリック →「開く」。または「システム設定 → プライバシーとセキュリティ」で「このまま開く」をクリックします。
 

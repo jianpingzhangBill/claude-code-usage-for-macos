@@ -1,6 +1,6 @@
 # Claude Usage Monitor
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · **Русский**
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · **Русский**
 
 Нативное приложение для строки меню macOS, которое в реальном времени отслеживает официальные лимиты использования и оценочные расходы **Claude Code**.
 
@@ -9,10 +9,10 @@
 ## Скриншоты
 
 <p align="center">
-  <img src="docs/screenshot-dashboard.png" width="340" alt="Панель лимитов использования и активности">
+  <img src="screenshot-dashboard.png" width="340" alt="Панель лимитов использования и активности">
 </p>
 <p align="center">
-  <img src="docs/screenshot-cost.png" width="520" alt="Оценка расходов">
+  <img src="screenshot-cost.png" width="520" alt="Оценка расходов">
 </p>
 
 ## Требования
@@ -22,7 +22,7 @@
 
 ## Установка
 
-1. Скачайте последний `Claude Usage Monitor.zip` из раздела [Releases](../../releases) и распакуйте.
+1. Скачайте последний `Claude Usage Monitor.zip` из раздела [Releases](../../../releases) и распакуйте.
 2. Перетащите `Claude Usage Monitor.app` в «Программы».
 3. Если macOS блокирует первый запуск: правый клик по приложению → «Открыть»; или откройте «Системные настройки → Конфиденциальность и безопасность» и нажмите «Всё равно открыть».
 
