@@ -48,7 +48,7 @@ Réglages Système → Général → Ouverture → ajouter `Claude Usage Monitor
 ## Tarification personnalisée
 
 Les dépenses sont estimées aux tarifs publics d'Anthropic (Fable/Mythos facturés temporairement au niveau Opus). Pour les remplacer, créez
-`~/.config/claude-usage-monitor/pricing.json`, avec des unités en « USD par million de tokens » :
+`~/.claude/claude-usage-monitor/pricing.json`, avec des unités en « USD par million de tokens » :
 
 ```json
 {

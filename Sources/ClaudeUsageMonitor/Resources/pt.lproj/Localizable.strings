@@ -8,6 +8,7 @@
 "Couldn't launch claude: %@" = "Não foi possível iniciar o claude: %@";
 "claude /usage timed out (>40s)" = "claude /usage expirou (>40s)";
 "claude /usage produced no output" = "claude /usage não produziu saída";
+"Claude Code CLI not found. Install it and make sure `claude` is on your PATH." = "CLI do Claude Code não encontrada. Instale-a e verifique se `claude` está no PATH.";
 
 /* Official limits + activity */
 "Usage limits · Official" = "Limites de uso · Oficial";

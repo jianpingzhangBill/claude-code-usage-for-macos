@@ -48,7 +48,7 @@
 ## 料金のカスタマイズ
 
 コストは Anthropic の公開料金で推定します（Fable/Mythos は暫定的に Opus 料金で計算）。上書きするには
-`~/.config/claude-usage-monitor/pricing.json` を作成します。単位は「100 万トークンあたりの USD」です:
+`~/.claude/claude-usage-monitor/pricing.json` を作成します。単位は「100 万トークンあたりの USD」です:
 
 ```json
 {

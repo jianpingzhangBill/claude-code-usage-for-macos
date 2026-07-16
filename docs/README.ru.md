@@ -48,7 +48,7 @@
 ## Настройка тарифов
 
 Расходы оцениваются по публичным тарифам Anthropic (Fable/Mythos временно тарифицируются по уровню Opus). Чтобы переопределить, создайте
-`~/.config/claude-usage-monitor/pricing.json`, единицы измерения — «USD за миллион токенов»:
+`~/.claude/claude-usage-monitor/pricing.json`, единицы измерения — «USD за миллион токенов»:
 
 ```json
 {

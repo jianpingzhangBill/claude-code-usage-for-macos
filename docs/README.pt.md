@@ -48,7 +48,7 @@ Ajustes do Sistema → Geral → Itens de Início → adicione `Claude Usage Mon
 ## Preços personalizados
 
 Os gastos são estimados pelos preços públicos da Anthropic (Fable/Mythos temporariamente cobrados no nível Opus). Para substituir, crie
-`~/.config/claude-usage-monitor/pricing.json`, com unidades em "USD por milhão de tokens":
+`~/.claude/claude-usage-monitor/pricing.json`, com unidades em "USD por milhão de tokens":
 
 ```json
 {

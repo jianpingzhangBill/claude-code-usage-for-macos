@@ -12,7 +12,7 @@ struct ModelPrice: Codable {
 /// Pricing table keyed by model *family*. Families are matched as substrings of
 /// the model id (e.g. "claude-opus-4-8" -> "opus"). Users can override any of
 /// these by dropping a JSON file at:
-///     ~/.config/claude-usage-monitor/pricing.json
+///     ~/.claude/claude-usage-monitor/pricing.json
 /// with the same shape, e.g. {"fable": {"input": 15, "output": 75, ...}}
 enum Pricing {
     // Anthropic list prices (USD / MTok). Adjust via the override file if needed.
@@ -27,9 +27,10 @@ enum Pricing {
 
     private static let table: [String: ModelPrice] = {
         var t = defaults
-        // Merge user overrides if present.
+        // Merge user overrides if present. Kept under ~/.claude so the app only
+        // ever touches files inside $HOME/.claude.
         let home = FileManager.default.homeDirectoryForCurrentUser
-        let url = home.appendingPathComponent(".config/claude-usage-monitor/pricing.json")
+        let url = home.appendingPathComponent(".claude/claude-usage-monitor/pricing.json")
         if let data = try? Data(contentsOf: url),
            let overrides = try? JSONDecoder().decode([String: ModelPrice].self, from: data) {
             for (k, v) in overrides { t[k.lowercased()] = v }

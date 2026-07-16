@@ -65,7 +65,18 @@ final class LimitsStore: ObservableObject {
     nonisolated private static func runUsageCommand() -> Result<String, RunError> {
         let p = Process()
         p.executableURL = URL(fileURLWithPath: "/bin/zsh")
-        p.arguments = ["-lc", "claude -p '/usage'"]
+        // A login shell is the only portable way to find `claude` regardless of
+        // how it was installed (npm, nvm/fnm, Homebrew, the native installer, …):
+        // we resolve it via the user's own PATH rather than guessing paths.
+        //
+        // `--strict-mcp-config` (with no `--mcp-config`) loads zero MCP servers, so
+        // this lightweight usage query never spawns the MCP health-check subprocesses
+        // claude would otherwise start. Those child processes are what caused macOS
+        // to attribute an unrelated media-library permission prompt to this app; the
+        // `/usage` contributor breakdown is computed from local logs, so nothing is
+        // lost. We also run from $HOME so no project-local `.mcp.json` is picked up.
+        p.arguments = ["-lc", "claude -p '/usage' --strict-mcp-config"]
+        p.currentDirectoryURL = FileManager.default.homeDirectoryForCurrentUser
         let out = Pipe(); let err = Pipe()
         p.standardOutput = out
         p.standardError = err
@@ -84,8 +95,14 @@ final class LimitsStore: ObservableObject {
         let data = out.fileHandleForReading.readDataToEndOfFile()
         let text = String(data: data, encoding: .utf8) ?? ""
         if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            let e = String(data: err.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8) ?? ""
-            return .failure(RunError(message: e.isEmpty ? L("claude /usage produced no output") : e.trimmingCharacters(in: .whitespacesAndNewlines)))
+            let e = String(data: err.fileHandleForReading.readDataToEndOfFile(), encoding: .utf8)?
+                .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            // `claude` isn't on the PATH the login shell built — most likely it
+            // isn't installed, or lives somewhere the shell profile doesn't export.
+            if e.contains("command not found") || e.contains("not found") {
+                return .failure(RunError(message: L("Claude Code CLI not found. Install it and make sure `claude` is on your PATH.")))
+            }
+            return .failure(RunError(message: e.isEmpty ? L("claude /usage produced no output") : e))
         }
         return .success(text)
     }

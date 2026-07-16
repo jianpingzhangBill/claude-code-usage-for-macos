@@ -48,7 +48,7 @@
 ## 自定义定价
 
 花费按 Anthropic 公开单价估算(Fable/Mythos 暂按 Opus 档)。要覆盖,创建
-`~/.config/claude-usage-monitor/pricing.json`,单位是「美元 / 百万 token」:
+`~/.claude/claude-usage-monitor/pricing.json`,单位是「美元 / 百万 token」:
 
 ```json
 {

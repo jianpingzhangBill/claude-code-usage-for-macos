@@ -48,7 +48,7 @@
 ## 요금 사용자 지정
 
 비용은 Anthropic의 공개 요금으로 추정됩니다(Fable/Mythos는 임시로 Opus 등급으로 청구). 재정의하려면
-`~/.config/claude-usage-monitor/pricing.json`을 만듭니다. 단위는 "100만 토큰당 USD"입니다:
+`~/.claude/claude-usage-monitor/pricing.json`을 만듭니다. 단위는 "100만 토큰당 USD"입니다:
 
 ```json
 {

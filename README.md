@@ -48,7 +48,7 @@ System Settings → General → Login Items → add `Claude Usage Monitor.app`.
 ## Custom pricing
 
 Spend is estimated at Anthropic's public rates (Fable/Mythos temporarily billed at the Opus tier). To override, create
-`~/.config/claude-usage-monitor/pricing.json`, with units in "USD per million tokens":
+`~/.claude/claude-usage-monitor/pricing.json`, with units in "USD per million tokens":
 
 ```json
 {

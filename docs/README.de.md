@@ -48,7 +48,7 @@ Systemeinstellungen → Allgemein → Anmeldeobjekte → `Claude Usage Monitor.a
 ## Preise anpassen
 
 Die Kosten werden zu den öffentlichen Preisen von Anthropic geschätzt (Fable/Mythos vorübergehend zum Opus-Tarif). Zum Überschreiben erstelle
-`~/.config/claude-usage-monitor/pricing.json`, mit Einheiten in „USD pro Million Tokens":
+`~/.claude/claude-usage-monitor/pricing.json`, mit Einheiten in „USD pro Million Tokens":
 
 ```json
 {
